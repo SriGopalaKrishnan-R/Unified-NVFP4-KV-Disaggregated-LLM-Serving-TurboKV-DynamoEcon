@@ -1,0 +1,204 @@
+{
+  "schema": "aiperf-tokconomics-pareto-v3",
+  "hardware_profile": "NVIDIA B200 SXM6 (32-GPU Pod)",
+  "workload_trace": {
+    "name": "multi_turn_agentic_tool_use_v2026",
+    "prefix_sharing_ratio": 0.75,
+    "arrival_process": "Bursty Clustered (12-req bursts)",
+    "sla_tiers": {
+      "tier1_interactive": {
+        "ttft_ms": 150,
+        "itl_ms": 20
+      },
+      "tier2_agentic": {
+        "ttft_ms": 400,
+        "itl_ms": 40
+      },
+      "tier3_batch": {
+        "best_effort": true
+      }
+    }
+  },
+  "series": [
+    {
+      "id": "turbokv_dynamoecon",
+      "label": "DynamoEcon-NIXL + TurboKV-FP4 (Full Stack)",
+      "points": [
+        {
+          "load_scale": 0.45,
+          "goodput_ktok_per_s": 18.9,
+          "p99_ttft_ms": 106.79,
+          "avg_ttft_ms": 38.04,
+          "sla_goodput_pct": 100.0,
+          "cost_per_1m_usd": 0.8813,
+          "tokens_per_watt": 4.0234
+        },
+        {
+          "load_scale": 0.7,
+          "goodput_ktok_per_s": 29.4,
+          "p99_ttft_ms": 117.44,
+          "avg_ttft_ms": 42.3,
+          "sla_goodput_pct": 100.0,
+          "cost_per_1m_usd": 0.6089,
+          "tokens_per_watt": 4.934
+        },
+        {
+          "load_scale": 0.9,
+          "goodput_ktok_per_s": 37.8,
+          "p99_ttft_ms": 128.57,
+          "avg_ttft_ms": 48.39,
+          "sla_goodput_pct": 100.0,
+          "cost_per_1m_usd": 0.5033,
+          "tokens_per_watt": 5.4215
+        },
+        {
+          "load_scale": 1.05,
+          "goodput_ktok_per_s": 44.1,
+          "p99_ttft_ms": 139.56,
+          "avg_ttft_ms": 61.88,
+          "sla_goodput_pct": 100.0,
+          "cost_per_1m_usd": 0.4559,
+          "tokens_per_watt": 5.508
+        },
+        {
+          "load_scale": 1.25,
+          "goodput_ktok_per_s": 52.5,
+          "p99_ttft_ms": 180.17,
+          "avg_ttft_ms": 83.37,
+          "sla_goodput_pct": 100.0,
+          "cost_per_1m_usd": 0.4275,
+          "tokens_per_watt": 5.4614
+        },
+        {
+          "load_scale": 1.5,
+          "goodput_ktok_per_s": 62.61,
+          "p99_ttft_ms": 252.13,
+          "avg_ttft_ms": 122.03,
+          "sla_goodput_pct": 99.38,
+          "cost_per_1m_usd": 0.4263,
+          "tokens_per_watt": 5.4209
+        }
+      ]
+    },
+    {
+      "id": "bf16_dynamoecon",
+      "label": "DynamoEcon-NIXL + Standard BF16 KV",
+      "points": [
+        {
+          "load_scale": 0.45,
+          "goodput_ktok_per_s": 15.55,
+          "p99_ttft_ms": 155.47,
+          "avg_ttft_ms": 50.97,
+          "sla_goodput_pct": 93.47,
+          "cost_per_1m_usd": 1.2867,
+          "tokens_per_watt": 2.7359
+        },
+        {
+          "load_scale": 0.7,
+          "goodput_ktok_per_s": 23.25,
+          "p99_ttft_ms": 174.67,
+          "avg_ttft_ms": 56.69,
+          "sla_goodput_pct": 89.85,
+          "cost_per_1m_usd": 0.889,
+          "tokens_per_watt": 3.3551
+        },
+        {
+          "load_scale": 0.9,
+          "goodput_ktok_per_s": 28.92,
+          "p99_ttft_ms": 193.63,
+          "avg_ttft_ms": 64.84,
+          "sla_goodput_pct": 86.95,
+          "cost_per_1m_usd": 0.7348,
+          "tokens_per_watt": 3.6866
+        },
+        {
+          "load_scale": 1.05,
+          "goodput_ktok_per_s": 32.9,
+          "p99_ttft_ms": 211.49,
+          "avg_ttft_ms": 82.91,
+          "sla_goodput_pct": 84.78,
+          "cost_per_1m_usd": 0.6657,
+          "tokens_per_watt": 3.7454
+        },
+        {
+          "load_scale": 1.25,
+          "goodput_ktok_per_s": 37.83,
+          "p99_ttft_ms": 271.14,
+          "avg_ttft_ms": 111.72,
+          "sla_goodput_pct": 81.88,
+          "cost_per_1m_usd": 0.6241,
+          "tokens_per_watt": 3.7138
+        },
+        {
+          "load_scale": 1.5,
+          "goodput_ktok_per_s": 43.04,
+          "p99_ttft_ms": 374.94,
+          "avg_ttft_ms": 163.53,
+          "sla_goodput_pct": 77.62,
+          "cost_per_1m_usd": 0.6224,
+          "tokens_per_watt": 3.6862
+        }
+      ]
+    },
+    {
+      "id": "baseline_static_rr",
+      "label": "Static Round-Robin Disagg + LRU (Baseline)",
+      "points": [
+        {
+          "load_scale": 0.45,
+          "goodput_ktok_per_s": 12.47,
+          "p99_ttft_ms": 944.88,
+          "avg_ttft_ms": 168.57,
+          "sla_goodput_pct": 84.58,
+          "cost_per_1m_usd": 1.5288,
+          "tokens_per_watt": 2.4728
+        },
+        {
+          "load_scale": 0.7,
+          "goodput_ktok_per_s": 17.87,
+          "p99_ttft_ms": 1417.08,
+          "avg_ttft_ms": 261.48,
+          "sla_goodput_pct": 77.92,
+          "cost_per_1m_usd": 1.6119,
+          "tokens_per_watt": 2.6194
+        },
+        {
+          "load_scale": 0.9,
+          "goodput_ktok_per_s": 21.44,
+          "p99_ttft_ms": 1605.25,
+          "avg_ttft_ms": 323.0,
+          "sla_goodput_pct": 72.71,
+          "cost_per_1m_usd": 1.6771,
+          "tokens_per_watt": 2.6419
+        },
+        {
+          "load_scale": 1.05,
+          "goodput_ktok_per_s": 24.15,
+          "p99_ttft_ms": 1699.35,
+          "avg_ttft_ms": 361.47,
+          "sla_goodput_pct": 70.21,
+          "cost_per_1m_usd": 1.7094,
+          "tokens_per_watt": 2.659
+        },
+        {
+          "load_scale": 1.25,
+          "goodput_ktok_per_s": 23.46,
+          "p99_ttft_ms": 1789.69,
+          "avg_ttft_ms": 407.83,
+          "sla_goodput_pct": 57.29,
+          "cost_per_1m_usd": 1.9938,
+          "tokens_per_watt": 2.7041
+        },
+        {
+          "load_scale": 1.5,
+          "goodput_ktok_per_s": 22.11,
+          "p99_ttft_ms": 1868.76,
+          "avg_ttft_ms": 449.41,
+          "sla_goodput_pct": 45.0,
+          "cost_per_1m_usd": 2.3503,
+          "tokens_per_watt": 2.6968
+        }
+      ]
+    }
+  ]
+}

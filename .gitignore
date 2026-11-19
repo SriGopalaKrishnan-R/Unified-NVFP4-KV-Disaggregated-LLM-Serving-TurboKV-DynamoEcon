@@ -1,0 +1,29 @@
+# CMake & C++/CUDA build outputs
+build/
+out/
+*.o
+*.obj
+*.dll
+*.so
+*.dylib
+*.exe
+*.lib
+*.a
+*.exp
+*.pdb
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Frontend dependencies & build bundle
+ui/node_modules/
+ui/dist/
+*.tsbuildinfo
+
+# OS & editor files
+.DS_Store
+Thumbs.db

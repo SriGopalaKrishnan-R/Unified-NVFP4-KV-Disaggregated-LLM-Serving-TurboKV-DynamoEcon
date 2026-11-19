@@ -1,0 +1,10 @@
+{
+  "schema": "nsight-compute-ncu-rep-v2026.1",
+  "device": "NVIDIA B200 SXM6 (Blackwell SM100)",
+  "kernel": "kv_decode_fp4_fused_kernel<128>",
+  "hbm_bw_utilization_pct": 87.6832961612225,
+  "achieved_hbm_bw_gbps": 7014.6636928978005,
+  "registers_per_thread": 64,
+  "achieved_occupancy_pct": 50.0,
+  "shared_mem_bank_conflicts": 0
+}
