@@ -14,7 +14,7 @@ Both C++20 engines compile natively on standard x86 CPUs through an OpenMP and A
 * `control_plane` provides the FastAPI backend connected directly to the compiled C++20 shared libraries along with a ZeroMQ KV event bus and Prometheus metrics endpoint and Pareto replay runner
 * `ui` provides the React and TypeScript and Vite web interface for inspecting kernel metrics and routing decisions and cluster failover in real time
 
-## Browser Snapshots
+## Snapshots
 
 ### TurboKV FP4 Kernel Workbench and Hadamard Layout
 
